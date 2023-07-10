@@ -1,5 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Dashboard from "./Pages/Order/Dashboard";
+import MobileUpdate from "./Pages/Order/MobileUpdate";
+import Admin from "./Pages/Admin";
 
 const rootStyle = {
   backgroundColor: "#ADD8E6",
@@ -10,7 +12,9 @@ function App() {
   return (
     <div className="App" style={rootStyle}>
       <Routes>
+        <Route path="/admin" element={<Admin />} />
         <Route path="/dashboard/:OrderId" element={<Dashboard />} />
+        <Route path="/stage/update/:OrderId" element={<MobileUpdate />} />
       </Routes>
     </div>
   );
